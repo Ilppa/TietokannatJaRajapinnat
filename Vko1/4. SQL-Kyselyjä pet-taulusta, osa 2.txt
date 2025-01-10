@@ -1,0 +1,20 @@
+4. SQL-Kyselyjä pet-taulusta, osa 2
+
+a) Minkä nimisiä omistajia taulussa on ? Tulosta omistajan nimi vain kerran.
+SELECT DISTINCT owner FROM 'pet2.0' WHERE 1;
+
+b) Tulosta lemmikkien nimet aakkosjärjestyksessä.
+SELECT * FROM `pet2.0` ORDER BY `pet2.0`.`name` ASC
+
+c) Tulosta kaikki elossa olevat lemmikit.
+SELECT name FROM `pet2.0` WHERE death IS NULL;
+
+d) Tulosta kaikki omistajat, joiden nimi alkaa kirjaimella H.
+SELECT DISTINCT owner FROM `pet2.0` WHERE owner LIKE 'H%';
+
+e) Tulosta lemmikkien nimet, joiden nimessä esiintyy kirjaimet ff.
+SELECT name FROM `pet2.0` WHERE name LIKE '%ff%';
+
+f) Tulosta lemmikkien nimet, joiden nimessä on 4 kirjainta.
+SELECT name FROM `pet2.0` WHERE LENGTH(name)=4;
+
